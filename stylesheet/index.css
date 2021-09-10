@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+   
 }
 ol, ul {
 	list-style: none;
@@ -45,6 +46,13 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.header {
+    position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
 }
 
 .header_links {
@@ -65,20 +73,195 @@ table {
 .logo {
     background-image: url("https://tech-camp.in/note/wp-content/uploads/programing.jpg");
     background-size: cover;
-    height: 500px;
-    width: 100%;
+    max-height: 500px;
+    width: auto;
     margin: 0 auto;
 }
 
 .logo h1 {
     text-align: center;
     padding-top: 150px;
+    padding-bottom: 150px;
     font-size: 100px;
     font-family: Impact;
     font-size: 80px;
-    -webkit-text-stroke: 2px #fff
+    -webkit-text-stroke: 2px #fff;
+    opacity: 0;
+    animation-name: fadein-bottom;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+ }
+ @keyframes fadein-bottom {
+    0% {
+       opacity: 0;
+       transform: translateY(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
 }
-.logo span {
+
+span {
     color: red;
-    font-size: 180px;
+    font-size: 150px;
+}
+
+.profile {
+    text-align: center;
+    padding-top: 30px;
+    background-color: #F2F2F2;
+    height: 730px;
+    width: 600px;
+    margin-top: 400px;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+.profile h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: Georgia;
+}
+
+.profile h4 {
+    font-family: Georgia;
+    padding-top: 20px;
+}
+
+.myimage {
+    padding-top: 50px;
+    
+}
+
+.myname {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.skill {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 60px;
+    font-family: Georgia;
+    background-color: #F2F2F2;
+    height: 700px;
+    width: 600px;
+    margin-top: 20px;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+.skillimage {
+    padding-top: 30px;
+    margin-bottom: -30px;
+}
+
+.markup h6 {
+    display: inline-block;
+    font-family: Impact;
+    padding-left: 30px;
+    font-size: 20px;
+    margin-left: -20px;
+    
+}
+
+.backskill h6 {
+    display: inline-block;
+    font-family: Impact;
+    padding-left: 45px;
+    font-size: 20px;
+    margin-left: -20px;
+}
+
+.cloudimage {
+    padding-top: 30px;
+    margin-bottom: -30px;
+}
+
+.cloudskill h6 {
+    display: inline-block;
+    font-family: Impact;
+    padding-left: 27px;
+    font-size: 20px;
+    margin-left: -20px;
+}
+
+.dbimage {
+    padding-top: 30px;
+    margin-bottom: -30px;
+}
+
+.dbskill h6 {
+    display: inline-block;
+    font-family: Impact;
+    padding-left: 27px;
+    font-size: 20px;
+    margin-left: -20px;
+}
+
+.works {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 60px;
+    font-family: Georgia;
+    background-color: #F2F2F2;
+    height: 530px;
+    width: 600px;
+    margin-top: -50px;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+
+.work1 h1{
+    padding-top: 50px;
+    font-size: 40px;
+    font-family: Georgia;
+}
+
+.work2 {
+    padding-top: 50px;
+    font-size: 40px;
+}
+
+.work2 h4 {
+    font-size: 25px;
+    padding-bottom: 10px;
+    color: red;
+}
+
+.work2 a{
+    text-decoration: none;
+}
+
+.last h1 {
+    font-size: 100px;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    margin-top: -150px;
+    padding-bottom: 100px;
+}
+
+.footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.footer h6 {
+    color: #fff;
+    margin-right: 70px;
+    text-decoration: none;
+    font-family: Georgia;
 }
